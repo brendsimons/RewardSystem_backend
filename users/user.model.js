@@ -8,6 +8,7 @@ const schema = new Schema({
     lastName: { type: String, required: true },
     score: { type: Number , default: 0 },
     credits: { type: Number, default: 0 },
+    isAdmin: { type: Boolean, default: false },
     createdDate: { type: Date, default: Date.now }
 });
 
