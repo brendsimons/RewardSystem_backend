@@ -1,0 +1,27 @@
+{
+  "name": "rewardsystem_backend",
+  "version": "1.0.0",
+  "description": "This project is the backend for the [Reward System Frontend](https://github.com/brendsimons/RewardSystem_frontend) project.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brendsimons/RewardSystem_backend.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/brendsimons/RewardSystem_backend/issues"
+  },
+  "homepage": "https://github.com/brendsimons/RewardSystem_backend#readme",
+  "devDependencies": {
+    "nodemon": "^1.18.6"
+  },
+  "dependencies": {
+    "express": "^4.16.4",
+    "mongoose": "^5.3.12"
+  }
+}
