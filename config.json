@@ -1,4 +1,14 @@
 {
   "connectionString": "mongodb://dev:dev123@ds113455.mlab.com:13455/rewardsystem",
-  "secret": "gnrqeoghaQFGBEJLRQGLERLGQDMFD;SùreipgnNGZO"
+  "secret": "gnrqeoghaQFGBEJLRQGLERLGQDMFD;SùreipgnNGZO",
+  "permissions": {
+    "admin": [
+      "ADMIN1",
+      "ADMIN2",
+      "ADMIN3"
+    ],
+    "user": [
+      "USER1"
+    ]
+  }
 }

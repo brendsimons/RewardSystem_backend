@@ -6,9 +6,9 @@ const schema = new Schema({
     hash: { type: String, required: true },
     firstName: { type: String, required: true },
     lastName: { type: String, required: true },
-    score: { type: Number , default: 0 },
+    score: { type: Number, default: 0 },
     credits: { type: Number, default: 0 },
-    isAdmin: { type: Boolean, default: false },
+    role: { type: String, default: "user" },
     createdDate: { type: Date, default: Date.now }
 });
 
