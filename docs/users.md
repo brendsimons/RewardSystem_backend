@@ -1,4 +1,5 @@
 # /users
+A user is someone who will user the application.
 
 ### GET /users
 Get an array with all the users.

@@ -1,4 +1,5 @@
 # /rewards
+A reward is something that the user can buy with the credits that he earned.
 
 ### GET /rewards
 Get an array with all the rewards.

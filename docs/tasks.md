@@ -1,4 +1,5 @@
 # /tasks
+A task is something that the user can do in order to earn credits.
 
 ### GET /tasks
 Get an array with all the tasks.
