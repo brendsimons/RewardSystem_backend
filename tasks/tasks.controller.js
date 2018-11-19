@@ -3,13 +3,19 @@ const router = express.Router();
 const taskService = require('./task.service');
 
 // routes
-router.post('/register', register);
+router.post('/', create);
 router.get('/', getAll);
 router.get('/:id', getById);
 router.put('/:id', update);
 router.delete('/:id', _delete);
 
 module.exports = router;
+
+function create(req, res, next) {
+    taskService.create(req.body)
+        .then(() => res.json({}))
+        .catch(err => next(err));
+}
 
 function getAll(req, res, next) {
     taskService.getAll()
