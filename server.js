@@ -1,19 +1,26 @@
-var express = require('express'),
-    app = express(),
-    port = process.env.PORT || 3000,
-    mongoose = require('mongoose'),
-    Task = require('./api/models/todoListModel'), //created model loading here
-    bodyParser = require('body-parser');
+require('rootpath')();
+const express = require('express');
+const app = express();
+const cors = require('cors');
+const bodyParser = require('body-parser');
+const jwt = require('_helpers/jwt');
+const errorHandler = require('_helpers/error-handler');
 
-mongoose.Promise = global.Promise;
-mongoose.connect('mongodb://dev:dev123@ds113455.mlab.com:13455/rewardsystem');
-
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
+app.use(cors());
 
-var routes = require('./api/routes/todoListRoutes'); //importing route
-routes(app); //register the route
+// use JWT auth to secure the api
+app.use(jwt());
 
-app.listen(port);
+// api routes
+app.use('/users', require('./users/users.controller'));
 
-console.log('todo list RESTful API server started on: ' + port);
+// global error handler
+app.use(errorHandler);
+
+// start server
+const port = process.env.NODE_ENV === 'production' ? 80 : 3000;
+const server = app.listen(port, function () {
+    console.log('Server listening on port ' + port);
+});
