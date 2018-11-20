@@ -20,7 +20,8 @@ async function getById(id) {
     return await Claim.findById(id);
 }
 
-async function create(claimParam) {
+async function create(userId, claimParam) {
+    claimParam.userId = userId;
 
     const claim = new Claim(claimParam);
 
