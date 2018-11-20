@@ -10,5 +10,11 @@
     "user": [
       "USER1"
     ]
-  }
+  },
+  "claimStatusses": [
+    "this is a default",
+    "pending",
+    "rewarded",
+    "not-rewarded"
+  ]
 }
