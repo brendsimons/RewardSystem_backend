@@ -5,7 +5,7 @@ const db = require('_helpers/db');
 const User = db.User;
 
 module.exports = {
-    authenticate,
+    login,
     getAll,
     getById,
     create,
@@ -13,7 +13,7 @@ module.exports = {
     delete: _delete
 };
 
-async function authenticate({ username, password }) {
+async function login({ username, password }) {
     const user = await User.findOne({ username });
     if (user && bcrypt.compareSync(password, user.hash)) {
         const { hash, ...userWithoutHash } = user.toObject();

@@ -27,8 +27,9 @@ Get an array with all the users.
 ]
 ```
 
-### POST /users
-Create a new user.
+### POST ~~/users~~ or /users/register
+Create a new user.  
+`/users` is for creating a new user as `admin`, `/users/register` is for creating a new account yourself.
 
 **request**
 ```json
@@ -49,6 +50,31 @@ Create a new user.
     "credits": 0,
     "email": "email@email.com",
     "image": "https://domain/path/file.ext"
+}
+```
+
+### POST /users/login
+Login a user.  
+*You can use `test@test.be` as email and `test` as password for testing.*
+
+**request**
+```json
+{
+    "email": "email@email.com",
+    "password": "abc123"
+}
+```
+**response**
+```json
+{
+    "_id": "5bf27b639013132040aeb718",
+    "firstName": "Jan",
+    "lastName": "",
+    "score": 0,
+    "credits": 0,
+    "email": "email@email.com",
+    "image": "https://domain/path/file.ext",
+    "token": "ThisIsA_SECRET_Token"
 }
 ```
 

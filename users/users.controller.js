@@ -4,8 +4,9 @@ const userService = require('./user.service');
 const permission = require('../_helpers/permission');
 
 // routes
-router.post('/authenticate', authenticate);
-router.post('/register', register);
+router.post('/login', login);
+router.post('/register', create);
+router.post('/', create);
 router.get('/', getAll);
 router.get('/current', getCurrent);
 router.get('/:id', getById);
@@ -14,13 +15,13 @@ router.delete('/:id', _delete);
 
 module.exports = router;
 
-function authenticate(req, res, next) {
-    userService.authenticate(req.body)
+function login(req, res, next) {
+    userService.login(req.body)
         .then(user => user ? res.json(user) : res.status(400).json({ message: 'Username or password is incorrect' }))
         .catch(err => next(err));
 }
 
-function register(req, res, next) {
+function create(req, res, next) {
     userService.create(req.body)
         .then(() => res.json({}))
         .catch(err => next(err));
