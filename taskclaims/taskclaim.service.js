@@ -15,13 +15,13 @@ module.exports = {
 
 async function getAll() {
     return await TaskClaim.find()
-        .populate('user', ['firstName', 'lastName', 'email'])
+        .populate('user', ['firstName', 'lastName', 'email', 'credits', 'score'])
         .populate('task');
 }
 
 async function getById(id) {
     return await TaskClaim.findById(id)
-        .populate('user', ['firstName', 'lastName', 'email'])
+        .populate('user', ['firstName', 'lastName', 'email', 'credits', 'score'])
         .populate('task');
 }
 

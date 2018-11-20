@@ -15,13 +15,13 @@ module.exports = {
 
 async function getAll() {
     return await RewardClaim.find()
-        .populate('user', ['firstName', 'lastName', 'email'])
+        .populate('user', ['firstName', 'lastName', 'email', 'credits', 'score'])
         .populate('reward');
 }
 
 async function getById(id) {
     return await RewardClaim.findById(id)
-        .populate('user', ['firstName', 'lastName', 'email'])
+        .populate('user', ['firstName', 'lastName', 'email', 'credits', 'score'])
         .populate('reward');
 }
 

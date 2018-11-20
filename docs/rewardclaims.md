@@ -8,21 +8,57 @@ Get an array with all the reward claims.
 [
     {
         "_id": "5bf27b639013132040aeb718",
-        "userId": "5bf27b639013132040aeb718",
-        "rewardId": "5bf27b639013132040aeb718",
-        "status": "pending"
+        "status": "pending",
+        "user": {
+            "_id": "5bf27b639013132040aeb718",
+            "firstName": "Jan",
+            "lastName": "",
+            "email": "email@email.com",
+            "credits": 0,
+            "score": 0
+        },
+        "reward": {
+            "_id": "5bf27b639013132040aeb718",
+            "name": "Bol.com bon (25 euro)",
+            "score": 25,
+            "image": "https://domain/path/G1.ext"
+        }
     },
     {
         "_id": "5bf27b639013132040aeb718",
-        "userId": "5bf27b639013132040aeb718",
-        "rewardId": "5bf27b639013132040aeb718",
-        "status": "bought"
+        "status": "bought",
+        "user": {
+            "_id": "5bf27b639013132040aeb718",
+            "firstName": "Jan",
+            "lastName": "",
+            "email": "email@email.com",
+            "credits": 0,
+            "score": 0
+        },
+        "reward": {
+            "_id": "5bf27b639013132040aeb718",
+            "name": "Bol.com bon (25 euro)",
+            "score": 25,
+            "image": "https://domain/path/G1.ext"
+        }
     },
     {
         "_id": "5bf27b639013132040aeb718",
-        "userId": "5bf27b639013132040aeb718",
-        "rewardId": "5bf27b639013132040aeb718",
-        "status": "done"
+        "status": "done",
+        "user": {
+            "_id": "5bf27b639013132040aeb718",
+            "firstName": "Jan",
+            "lastName": "",
+            "email": "email@email.com",
+            "credits": 0,
+            "score": 0
+        },
+        "reward": {
+            "_id": "5bf27b639013132040aeb718",
+            "name": "Bol.com bon (25 euro)",
+            "score": 25,
+            "image": "https://domain/path/G1.ext"
+        }
     }
 ]
 ```
@@ -40,9 +76,21 @@ Create a new claim.
 ```json
 {
     "_id": "5bf27b639013132040aeb718",
-    "userId": "5bf27b639013132040aeb718",
-    "rewardId": "5bf27b639013132040aeb718",
-    "status": "pending"
+    "status": "pending",
+    "user": {
+        "_id": "5bf27b639013132040aeb718",
+        "firstName": "Jan",
+        "lastName": "",
+        "email": "email@email.com",
+        "credits": 0,
+        "score": 0
+    },
+    "reward": {
+        "_id": "5bf27b639013132040aeb718",
+        "name": "Bol.com bon (25 euro)",
+        "score": 25,
+        "image": "https://domain/path/G1.ext"
+    }
 }
 ```
 
@@ -52,9 +100,21 @@ Get a specific claim.
 ```json
 {
     "_id": "5bf27b639013132040aeb718",
-    "userId": "5bf27b639013132040aeb718",
-    "rewardId": "5bf27b639013132040aeb718",
-    "status": "pending"
+    "status": "pending",
+    "user": {
+        "_id": "5bf27b639013132040aeb718",
+        "firstName": "Jan",
+        "lastName": "",
+        "email": "email@email.com",
+        "credits": 0,
+        "score": 0
+    },
+    "reward": {
+        "_id": "5bf27b639013132040aeb718",
+        "name": "Bol.com bon (25 euro)",
+        "score": 25,
+        "image": "https://domain/path/G1.ext"
+    }
 }
 ```
 
@@ -73,9 +133,21 @@ Update a specific claims.
 ```json
 {
     "_id": "5bf27b639013132040aeb718",
-    "userId": "5bf27b639013132040aeb718",
-    "taskId": "5bf27b639013132000G10018",
-    "status": "rewarded"
+    "status": "rewarded",
+    "user": {
+        "_id": "5bf27b639013132040aeb718",
+        "firstName": "Jan",
+        "lastName": "",
+        "email": "email@email.com",
+        "credits": 0,
+        "score": 0
+    },
+    "reward": {
+        "_id": "5bf27b639013132040aeb718",
+        "name": "Bol.com bon (25 euro)",
+        "score": 25,
+        "image": "https://domain/path/G1.ext"
+    }
 }
 ```
 

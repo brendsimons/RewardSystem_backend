@@ -9,12 +9,12 @@ Get an array with all the tasks.
     {
         "_id": "5bf27b639013132040aeb718",
         "name": "Blogpost schrijven",
-        "score": 1,
+        "score": 1
     },
     {
         "_id": "5bf27b639013132040aeb718",
         "name": "Presentatie geven",
-        "score": 10,
+        "score": 10
     }
 ]
 ```
@@ -26,7 +26,7 @@ Create a new task.
 ```json
 {
     "name": "Presentatie geven",
-    "score": 10,
+    "score": 10
 }
 ```
 **response**
@@ -34,7 +34,7 @@ Create a new task.
 {
     "_id": "5bf27b639013132040aeb718",
     "name": "Presentatie geven",
-    "score": 10,
+    "score": 10
 }
 ```
 
@@ -45,7 +45,7 @@ Get a specific task.
 {
     "_id": "5bf27b639013132040aeb718",
     "name": "Groepsproject maken",
-    "score": 1,
+    "score": 1
 }
 ```
 
@@ -57,7 +57,7 @@ Update a specific task.
 ```json
 {
     "name": "Nieuwe naam",
-    "score": 15,
+    "score": 15
 }
 ```
 **response**
@@ -65,7 +65,7 @@ Update a specific task.
 {
     "_id": "5bf27b639013132040aeb718",
     "name": "Nieuwe naam",
-    "score": 15,
+    "score": 15
 }
 ```
 

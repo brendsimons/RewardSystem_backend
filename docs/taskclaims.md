@@ -8,24 +8,57 @@ Get an array with all the claims.
 [
     {
         "_id": "5bf27b639013132040aeb718",
-        "userId": "5bf27b639013132040aeb718",
-        "taskId": "5bf27b639013132040aeb718",
         "message": "I gave the presentation \"How does Blockchain work?\"",
-        "status": "pending"
+        "status": "pending",
+        "user": {
+            "_id": "5bf27b639013132040aeb718",
+            "firstName": "Jan",
+            "lastName": "",
+            "email": "email@email.com",
+            "credits": 0,
+            "score": 0
+        },
+        "task": {
+            "_id": "5bf27b639013132040aeb718",
+            "name": "Nieuwe naam",
+            "score": 15
+        }
     },
     {
         "_id": "5bf27b639013132040aeb718",
-        "userId": "5bf27b639013132040aeb718",
-        "taskId": "5bf27b639013132040aeb718",
         "message": "This is a description written by the user.",
-        "status": "not-rewarded"
+        "status": "not-rewarded",
+        "user": {
+            "_id": "5bf27b639013132040aeb718",
+            "firstName": "Jan",
+            "lastName": "",
+            "email": "email@email.com",  
+            "credits": 0,
+            "score": 0
+        },
+        "task": {
+            "_id": "5bf27b639013132040aeb718",
+            "name": "Nieuwe naam",
+            "score": 15
+        }
     },
     {
         "_id": "5bf27b639013132040aeb718",
-        "userId": "5bf27b639013132040aeb718",
-        "taskId": "5bf27b639013132040aeb718",
         "message": "GIVE ME CREDITS!",
-        "status": "rewarded"
+        "status": "rewarded",
+        "user": {
+            "_id": "5bf27b639013132040aeb718",
+            "firstName": "Jan",
+            "lastName": "",
+            "email": "email@email.com",  
+            "credits": 0,
+            "score": 0
+        },
+        "task": {
+            "_id": "5bf27b639013132040aeb718",
+            "name": "Nieuwe naam",
+            "score": 15
+        }
     }
 ]
 ```
@@ -44,10 +77,21 @@ Create a new claim.
 ```json
 {
     "_id": "5bf27b639013132040aeb718",
-    "userId": "5bf27b639013132040aeb718",
-    "taskId": "5bf27b639013132040aeb718",
     "message": "This is a description written by the user.",
-    "status": "pending"
+    "status": "pending",
+    "user": {
+        "_id": "5bf27b639013132040aeb718",
+        "firstName": "Jan",
+        "lastName": "",
+        "email": "email@email.com",
+        "credits": 0,
+        "score": 0
+    },
+    "task": {
+        "_id": "5bf27b639013132040aeb718",
+        "name": "Nieuwe naam",
+        "score": 15
+    }
 }
 ```
 
@@ -57,10 +101,21 @@ Get a specific claim.
 ```json
 {
     "_id": "5bf27b639013132040aeb718",
-    "userId": "5bf27b639013132040aeb718",
-    "taskId": "5bf27b639013132040aeb718",
     "message": "This is a description written by the user.",
-    "status": "pending"
+    "status": "pending",
+    "user": {
+        "_id": "5bf27b639013132040aeb718",
+        "firstName": "Jan",
+        "lastName": "",
+        "email": "email@email.com",
+        "credits": 0,
+        "score": 0
+    },
+    "task": {
+        "_id": "5bf27b639013132040aeb718",
+        "name": "Nieuwe naam",
+        "score": 15
+    }
 }
 ```
 
@@ -80,10 +135,21 @@ Update a specific claims.
 ```json
 {
     "_id": "5bf27b639013132040aeb718",
-    "userId": "5bf27b639013132040aeb718",
-    "taskId": "5bf27b639013132040aeb718",
     "message": "This is a description written by the user G1.",
-    "status": "rewarded"
+    "status": "rewarded",
+    "user": {
+        "_id": "5bf27b639013132040aeb718",
+        "firstName": "Jan",
+        "lastName": "",
+        "email": "email@email.com",
+        "credits": 0,
+        "score": 0
+    },
+    "task": {
+        "_id": "5bf27b639013132040aeb718",
+        "name": "Nieuwe naam",
+        "score": 15
+    }
 }
 ```
 

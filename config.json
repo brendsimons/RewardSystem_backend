@@ -12,15 +12,14 @@
     ]
   },
   "taskClaimStatusses": [
-    "this is a default",
     "pending",
     "rewarded",
     "not-rewarded"
   ],
   "rewardClaimStatusses": [
-    "this is a default",
     "pending",
-    "rewarded",
-    "not-rewarded"
+    "bought",
+    "received",
+    "completed"
   ]
 }
