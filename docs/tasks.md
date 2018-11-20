@@ -44,8 +44,8 @@ Get a specific task.
 ```json
 {
     "_id": "5bf27b639013132040aeb718",
-    "name": "Presentatie geven",
-    "score": 10,
+    "name": "Groepsproject maken",
+    "score": 1,
 }
 ```
 

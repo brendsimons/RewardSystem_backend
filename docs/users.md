@@ -13,7 +13,7 @@ Get an array with all the users.
         "score": 1250,
         "credits": 250,
         "email": "email@email.com",
-        "image": "https://domain/path/file.ext"
+        "image": "https://domain/path/G1.ext"
     },
     {
         "_id": "5bf27b639013132040aeb718",
@@ -22,7 +22,7 @@ Get an array with all the users.
         "score": 1250,
         "credits": 250,
         "email": "email@email.com",
-        "image": "https://domain/path/file.ext"
+        "image": "https://domain/path/G1.ext"
     }
 ]
 ```
@@ -37,7 +37,7 @@ Create a new user.
     "firstName": "Jan",
     "lastName": "",
     "email": "email@email.com",
-    "image": "https://domain/path/file.ext"
+    "image": "https://domain/path/G1.ext"
 }
 ```
 **response**
@@ -49,7 +49,7 @@ Create a new user.
     "score": 0,
     "credits": 0,
     "email": "email@email.com",
-    "image": "https://domain/path/file.ext"
+    "image": "https://domain/path/G1.ext"
 }
 ```
 
@@ -73,7 +73,7 @@ Login a user.
     "score": 0,
     "credits": 0,
     "email": "email@email.com",
-    "image": "https://domain/path/file.ext",
+    "image": "https://domain/path/G1.ext",
     "token": "ThisIsA_SECRET_Token"
 }
 ```
@@ -89,7 +89,7 @@ Get a specific user.
     "score": 1250,
     "credits": 250,
     "email": "email@email.com",
-    "image": "https://domain/path/file.ext"
+    "image": "https://domain/path/G1.ext"
 }
 ```
 
@@ -105,7 +105,7 @@ Update a specific user.
     "score": 1250,
     "credits": 250,
     "email": "email@email.com",
-    "image": "https://domain/path/file.ext"
+    "image": "https://domain/path/G1.ext"
 }
 ```
 **response**
@@ -117,7 +117,7 @@ Update a specific user.
     "score": 1250,
     "credits": 250,
     "email": "email@email.com",
-    "image": "https://domain/path/file.ext"
+    "image": "https://domain/path/G1.ext"
 }
 ```
 

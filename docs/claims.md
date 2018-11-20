@@ -82,7 +82,7 @@ Update a specific claims.
     "_id": "5bf27b639013132040aeb718",
     "userId": "5bf27b639013132040aeb718",
     "taskId": "5bf27b639013132040aeb718",
-    "message": "This is a description written by the user.",
+    "message": "This is a description written by the user G1.",
     "status": "rewarded"
 }
 ```
