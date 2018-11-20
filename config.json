@@ -3,12 +3,14 @@
   "secret": "gnrqeoghaQFGBEJLRQGLER(G1)LGQDMFD;SùreipgnNGZO",
   "permissions": {
     "admin": [
-      "ADMIN1",
-      "ADMIN2",
-      "ADMIN3"
+      "manage_rewards",
+      "manage_reward_claims",
+      "manage_tasks",
+      "manage_task_claims",
+      "default"
     ],
     "user": [
-      "USER1"
+      "default"
     ]
   },
   "taskClaimStatusses": [

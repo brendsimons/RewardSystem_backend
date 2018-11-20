@@ -42,6 +42,9 @@ async function create(userParam) {
 
     const user = new User(userParam);
     user._id = new mongoose.Types.ObjectId();
+    user.score = 0;
+    user.credits = 0;
+    user.role = 'user';
 
     // hash password
     if (userParam.password) {

@@ -30,6 +30,7 @@ async function create(userId, rewardClaimParam) {
 
     const rewardClaim = new RewardClaim(rewardClaimParam);
     rewardClaim._id = new mongoose.Types.ObjectId();
+    rewardClaim.status = config.rewardClaimStatusses[0];
 
     // save claim
     await rewardClaim.save();

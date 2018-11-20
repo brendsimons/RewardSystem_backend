@@ -28,10 +28,6 @@ function create(req, res, next) {
 }
 
 function getAll(req, res, next) {
-    if (permission.check(req, "ADMIN1")) {
-        return permission.throw(res);
-    }
-
     userService.getAll()
         .then(users => res.json(users))
         .catch(err => next(err));
@@ -50,12 +46,20 @@ function getById(req, res, next) {
 }
 
 function update(req, res, next) {
+    if (permission.check(req, "manage_users")) {
+        return permission.throw(res);
+    }
+
     userService.update(req.params.id, req.body)
         .then(() => res.json({}))
         .catch(err => next(err));
 }
 
 function _delete(req, res, next) {
+    if (permission.check(req, "manage_users")) {
+        return permission.throw(res);
+    }
+
     userService.delete(req.params.id)
         .then(() => res.json({}))
         .catch(err => next(err));

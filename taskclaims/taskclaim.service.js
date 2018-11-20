@@ -30,6 +30,7 @@ async function create(userId, taskClaimParam) {
 
     const taskclaim = new TaskClaim(taskClaimParam);
     taskclaim._id = new mongoose.Types.ObjectId();
+    taskclaim.status = config.taskClaimStatusses[0];
 
     // save claim
     await taskclaim.save();

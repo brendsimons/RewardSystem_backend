@@ -19,6 +19,10 @@ function getAll(req, res, next) {
 }
 
 function create(req, res, next) {
+    if (permission.check(req, "manage_rewards")) {
+        return permission.throw(res);
+    }
+
     rewardService.create(req.body)
         .then(reward => res.json(reward))
         .catch(err => next(err));
@@ -31,12 +35,20 @@ function getById(req, res, next) {
 }
 
 function update(req, res, next) {
+    if (permission.check(req, "manage_rewards")) {
+        return permission.throw(res);
+    }
+
     rewardService.update(req.params.id, req.body)
         .then(() => res.json({}))
         .catch(err => next(err));
 }
 
 function _delete(req, res, next) {
+    if (permission.check(req, "manage_rewards")) {
+        return permission.throw(res);
+    }
+
     rewardService.delete(req.params.id)
         .then(() => res.json({
             "succes": true

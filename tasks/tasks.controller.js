@@ -12,6 +12,10 @@ router.delete('/:id', _delete);
 module.exports = router;
 
 function create(req, res, next) {
+    if (permission.check(req, "manage_tasks")) {
+        return permission.throw(res);
+    }
+
     taskService.create(req.body)
         .then(() => res.json({}))
         .catch(err => next(err));
@@ -30,12 +34,20 @@ function getById(req, res, next) {
 }
 
 function update(req, res, next) {
+    if (permission.check(req, "manage_tasks")) {
+        return permission.throw(res);
+    }
+
     taskService.update(req.params.id, req.body)
         .then(() => res.json({}))
         .catch(err => next(err));
 }
 
 function _delete(req, res, next) {
+    if (permission.check(req, "manage_tasks")) {
+        return permission.throw(res);
+    }
+
     taskService.delete(req.params.id)
         .then(() => res.json({}))
         .catch(err => next(err));

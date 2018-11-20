@@ -30,12 +30,20 @@ function getById(req, res, next) {
 }
 
 function update(req, res, next) {
+    if (permission.check(req, "manage_task_claims")) {
+        return permission.throw(res);
+    }
+
     taskClaimService.update(req.params.id, req.body)
         .then(() => res.json({}))
         .catch(err => next(err));
 }
 
 function _delete(req, res, next) {
+    if (permission.check(req, "manage_task_claims")) {
+        return permission.throw(res);
+    }
+
     taskClaimService.delete(req.params.id)
         .then(() => res.json({}))
         .catch(err => next(err));
