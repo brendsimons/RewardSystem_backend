@@ -11,7 +11,13 @@
       "USER1"
     ]
   },
-  "claimStatusses": [
+  "taskClaimStatusses": [
+    "this is a default",
+    "pending",
+    "rewarded",
+    "not-rewarded"
+  ],
+  "rewardClaimStatusses": [
     "this is a default",
     "pending",
     "rewarded",

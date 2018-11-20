@@ -7,5 +7,6 @@ module.exports = {
     User: require('../users/user.model'),
     Task: require('../tasks/task.model'),
     Reward: require('../rewards/reward.model'),
-    Claim: require('../claims/claim.model')
+    RewardClaim: require('../rewardclaims/rewardclaim.model'),
+    TaskClaim: require('../taskclaims/taskclaim.model')
 };

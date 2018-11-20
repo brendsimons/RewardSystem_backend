@@ -1,7 +1,7 @@
-# /claims
+# /taskclaims
 A user can submit a claim in order to request the reward from a task.
 
-### GET /claims
+### GET /taskclaims
 Get an array with all the claims.
 
 ```json
@@ -30,7 +30,7 @@ Get an array with all the claims.
 ]
 ```
 
-### POST /claims
+### POST /taskclaims
 Create a new claim.
 
 **request**
@@ -51,7 +51,7 @@ Create a new claim.
 }
 ```
 
-### GET /claims/{claimId}
+### GET /taskclaims/{claimId}
 Get a specific claim.
 
 ```json
@@ -64,7 +64,7 @@ Get a specific claim.
 }
 ```
 
-### PUT /claims/{claimId}
+### PUT /taskclaims/{claimId}
 Update a specific claims.  
 *Only send the parameters that you would like to change.*  
 **Changing the status to rewarded, will automatically add the credits to the user account!**
@@ -87,7 +87,7 @@ Update a specific claims.
 }
 ```
 
-### DELETE /claims/{claimId}
+### DELETE /taskclaims/{claimId}
 Delete a specific task.
 
 ```json

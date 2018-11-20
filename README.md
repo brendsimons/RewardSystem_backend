@@ -6,9 +6,10 @@ This project is the backend for the [Reward System Frontend](https://github.com/
 
 You can use use the development server at https://vpn.brendsimons.be/ to test the api.
 
-[/claims](/docs/claims.md)  
 [/rewards](/docs/rewards.md)  
+[/rewardclaims](/docs/rewardclaims.md)  
 [/tasks](/docs/tasks.md)  
+[/taskclaims](/docs/taskclaims.md)  
 [/users](/docs/users.md)  
 
 ### Permissions
