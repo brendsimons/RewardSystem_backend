@@ -2,6 +2,7 @@ const config = require('config.json');
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcryptjs');
 const db = require('_helpers/db');
+const mongoose = require('mongoose');
 const Task = db.Task;
 
 module.exports = {
@@ -23,6 +24,7 @@ async function getById(id) {
 async function create(taskParam) {
 
     const task = new Task(taskParam);
+    task._id = new mongoose.Types.ObjectId();
 
     // save task
     await task.save();

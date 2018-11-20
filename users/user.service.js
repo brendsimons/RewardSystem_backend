@@ -2,6 +2,7 @@ const config = require('config.json');
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcryptjs');
 const db = require('_helpers/db');
+const mongoose = require('mongoose');
 const User = db.User;
 
 module.exports = {
@@ -40,6 +41,7 @@ async function create(userParam) {
     }
 
     const user = new User(userParam);
+    user._id = new mongoose.Types.ObjectId();
 
     // hash password
     if (userParam.password) {

@@ -3,8 +3,9 @@ const config = require('config.json');
 const Schema = mongoose.Schema;
 
 const schema = new Schema({
-    userId: { type: String, required: true },
-    taskId: { type: String, required: true },
+    _id: Schema.Types.ObjectId,
+    user: { type: Schema.Types.ObjectId, ref: 'User' },
+    task: { type: Schema.Types.ObjectId, ref: 'Task' },
     message: { type: String, required: true },
     status: {
         type: [{

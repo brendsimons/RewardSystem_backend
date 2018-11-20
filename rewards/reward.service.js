@@ -2,6 +2,7 @@ const config = require('config.json');
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcryptjs');
 const db = require('_helpers/db');
+const mongoose = require('mongoose');
 const Reward = db.Reward;
 
 module.exports = {
@@ -22,6 +23,7 @@ async function getById(id) {
 
 async function create(rewardParam) {
     const reward = new Reward(rewardParam);
+    reward._id = new mongoose.Types.ObjectId();
     return await reward.save();
 }
 

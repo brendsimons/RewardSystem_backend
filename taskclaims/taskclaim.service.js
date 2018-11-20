@@ -2,6 +2,7 @@ const config = require('config.json');
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcryptjs');
 const db = require('_helpers/db');
+const mongoose = require('mongoose');
 const TaskClaim = db.TaskClaim;
 
 module.exports = {
@@ -13,17 +14,22 @@ module.exports = {
 };
 
 async function getAll() {
-    return await TaskClaim.find();
+    return await TaskClaim.find()
+        .populate('user')
+        .populate('task');
 }
 
 async function getById(id) {
-    return await TaskClaim.findById(id);
+    return await TaskClaim.findById(id)
+        .populate('user')
+        .populate('task');
 }
 
 async function create(userId, taskClaimParam) {
-    taskClaimParam.userId = userId;
+    taskClaimParam.user = userId;
 
     const taskclaim = new TaskClaim(taskClaimParam);
+    taskclaim._id = new mongoose.Types.ObjectId();
 
     // save claim
     await taskclaim.save();

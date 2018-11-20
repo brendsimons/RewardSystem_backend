@@ -3,8 +3,9 @@ const config = require('config.json');
 const Schema = mongoose.Schema;
 
 const schema = new Schema({
-    userId: { type: String, required: true },
-    rewardId: { type: String, required: true },
+    _id: Schema.Types.ObjectId,
+    user: { type: Schema.Types.ObjectId, ref: 'User', global: 1, required: true },
+    reward: { type: Schema.Types.ObjectId, ref: 'Reward', global: 1, required: true },
     status: {
         type: [{
             type: String,
