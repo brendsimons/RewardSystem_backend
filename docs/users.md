@@ -12,7 +12,8 @@ Get an array with all the users.
         "lastName": "",
         "score": 1250,
         "credits": 250,
-        "email": "email@email.com"
+        "email": "email@email.com",
+        "image": "https://domain/path/file.ext"
     },
     {
         "_id": "5bf27b639013132040aeb718",
@@ -20,7 +21,8 @@ Get an array with all the users.
         "lastName": "",
         "score": 1250,
         "credits": 250,
-        "email": "email@email.com"
+        "email": "email@email.com",
+        "image": "https://domain/path/file.ext"
     }
 ]
 ```
@@ -33,7 +35,8 @@ Create a new user.
 {
     "firstName": "Jan",
     "lastName": "",
-    "email": "email@email.com"
+    "email": "email@email.com",
+    "image": "https://domain/path/file.ext"
 }
 ```
 **response**
@@ -44,7 +47,8 @@ Create a new user.
     "lastName": "",
     "score": 0,
     "credits": 0,
-    "email": "email@email.com"
+    "email": "email@email.com",
+    "image": "https://domain/path/file.ext"
 }
 ```
 
@@ -58,7 +62,8 @@ Get a specific user.
     "lastName": "",
     "score": 1250,
     "credits": 250,
-    "email": "email@email.com"
+    "email": "email@email.com",
+    "image": "https://domain/path/file.ext"
 }
 ```
 
@@ -73,7 +78,8 @@ Update a specific user.
     "lastName": "",
     "score": 1250,
     "credits": 250,
-    "email": "email@email.com"
+    "email": "email@email.com",
+    "image": "https://domain/path/file.ext"
 }
 ```
 **response**
@@ -84,7 +90,8 @@ Update a specific user.
     "lastName": "",
     "score": 1250,
     "credits": 250,
-    "email": "email@email.com"
+    "email": "email@email.com",
+    "image": "https://domain/path/file.ext"
 }
 ```
 

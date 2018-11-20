@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const userService = require('./user.service');
+const permission = require('../_helpers/permission');
 
 // routes
 router.post('/authenticate', authenticate);
@@ -26,6 +27,10 @@ function register(req, res, next) {
 }
 
 function getAll(req, res, next) {
+    if (permission.check(req, "ADMIN1")) {
+        return permission.throw(res);
+    }
+
     userService.getAll()
         .then(users => res.json(users))
         .catch(err => next(err));

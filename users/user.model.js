@@ -9,7 +9,8 @@ const schema = new Schema({
     score: { type: Number, default: 0 },
     credits: { type: Number, default: 0 },
     role: { type: String, default: "user" },
-    createdDate: { type: Date, default: Date.now }
+    createdDate: { type: Date, default: Date.now },
+    image: { type: String, default: 'https://www.babybedding.com/images/products/silver-gray-minky-cradle-sheet_large.jpg' }
 });
 
 schema.set('toJSON', { virtuals: true });

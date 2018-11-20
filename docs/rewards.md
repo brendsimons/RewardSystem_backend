@@ -10,11 +10,13 @@ Get an array with all the rewards.
         "_id": "5bf27b639013132040aeb718",
         "name": "Bak bier",
         "score": 10,
+        "image": "https://domain/path/file.ext"
     },
     {
         "_id": "5bf27b639013132040aeb718",
         "name": "Bol.com bon (25 euro)",
         "score": 25,
+        "image": "https://domain/path/file.ext"
     }
 ]
 ```
@@ -27,6 +29,7 @@ Create a new reward.
 {
     "name": "Bol.com bon (25 euro)",
     "score": 25,
+    "image": "https://domain/path/file.ext"
 }
 ```
 **response**
@@ -35,6 +38,7 @@ Create a new reward.
     "_id": "5bf27b639013132040aeb718",
     "name": "Bol.com bon (25 euro)",
     "score": 25,
+    "image": "https://domain/path/file.ext"
 }
 ```
 
@@ -46,6 +50,7 @@ Get a specific reward.
     "_id": "5bf27b639013132040aeb718",
     "name": "Bol.com bon (25 euro)",
     "score": 25,
+    "image": "https://domain/path/file.ext"
 }
 ```
 
@@ -58,6 +63,7 @@ Update a specific reward.
 {
     "name": "Nieuwe naam",
     "score": 30,
+    "image": "https://domain/path/file.ext"
 }
 ```
 **response**
@@ -66,6 +72,7 @@ Update a specific reward.
     "_id": "5bf27b639013132040aeb718",
     "name": "Nieuwe naam",
     "score": 30,
+    "image": "https://domain/path/file.ext"
 }
 ```
 
