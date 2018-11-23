@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const rewardClaimService = require('./rewardclaim.service');
+const permission = require('../_helpers/permission');
 
 // routes
 router.post('/', create);

@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const rewardService = require('./reward.service');
+const permission = require('../_helpers/permission');
 
 // routes
 router.get('/', getAll);
