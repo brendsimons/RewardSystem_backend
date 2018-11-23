@@ -15,7 +15,9 @@ module.exports = {
 };
 
 async function getAll() {
-    return await TaskClaim.find()
+    return await TaskClaim.find({
+        disabled: false
+    })
         .populate('user', ['firstName', 'lastName', 'email', 'credits', 'score'])
         .populate('task');
 }
@@ -58,5 +60,7 @@ async function update(id, taskClaimParam) {
 }
 
 async function _delete(id) {
-    await TaskClaim.findByIdAndRemove(id);
+    await update(id, {
+        disabled: true
+    });
 }

@@ -14,7 +14,9 @@ module.exports = {
 };
 
 async function getAll() {
-    return await Reward.find();
+    return await Reward.find({
+        disabled: false
+    });
 }
 
 async function getById(id) {
@@ -40,5 +42,7 @@ async function update(id, rewardParam) {
 }
 
 async function _delete(id) {
-    await Reward.findByIdAndRemove(id);
+    await update(id, {
+        disabled: true
+    });
 }

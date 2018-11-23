@@ -16,7 +16,7 @@ module.exports = {
 
 async function login({ username, password }) {
     const user = await User.findOne({ username });
-    if (user && bcrypt.compareSync(password, user.hash)) {
+    if (user && !user.disabled && bcrypt.compareSync(password, user.hash)) {
         const { hash, ...userWithoutHash } = user.toObject();
         const token = jwt.sign({ sub: user.id, permissions: config.permissions[user.role] }, config.secret);
         return {
@@ -27,7 +27,9 @@ async function login({ username, password }) {
 }
 
 async function getAll() {
-    return await User.find().select('-hash');
+    return await User.find({
+        disabled: false
+    }).select('-hash');
 }
 
 async function getById(id) {
@@ -76,5 +78,7 @@ async function update(id, userParam) {
 }
 
 async function _delete(id) {
-    await User.findByIdAndRemove(id);
+    await update(id, {
+        disabled: true
+    });
 }

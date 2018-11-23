@@ -15,7 +15,9 @@ module.exports = {
 };
 
 async function getAll() {
-    return await RewardClaim.find()
+    return await RewardClaim.find({
+        disabled: false
+    })
         .populate('user', ['firstName', 'lastName', 'email', 'credits', 'score'])
         .populate('reward');
 }
@@ -58,5 +60,7 @@ async function update(id, rewardClaimParam) {
 }
 
 async function _delete(id) {
-    await RewardClaim.findByIdAndRemove(id);
+    await update(id, {
+        disabled: true
+    });
 }

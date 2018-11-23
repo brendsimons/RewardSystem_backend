@@ -12,7 +12,8 @@ const schema = new Schema({
             enum: config.rewardClaimStatusses
         }], default: config.rewardClaimStatusses[0], required: true
     },
-    createdDate: { type: Date, default: Date.now }
+    createdDate: { type: Date, default: Date.now },
+    disabled: { type: Boolean, default: false }
 });
 
 schema.set('toJSON', { virtuals: true });

@@ -14,7 +14,9 @@ module.exports = {
 };
 
 async function getAll() {
-    return await Task.find();
+    return await Task.find({
+        disabled: false
+    });
 }
 
 async function getById(id) {
@@ -43,5 +45,7 @@ async function update(id, taskParam) {
 }
 
 async function _delete(id) {
-    await Task.findByIdAndRemove(id);
+    await update(id, {
+        disabled: true
+    });
 }

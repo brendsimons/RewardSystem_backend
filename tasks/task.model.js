@@ -5,7 +5,8 @@ const schema = new Schema({
     _id: Schema.Types.ObjectId,
     name: { type: String, required: true },
     score: { type: Number, required: true },
-    createdDate: { type: Date, default: Date.now }
+    createdDate: { type: Date, default: Date.now },
+    disabled: { type: Boolean, default: false }
 });
 
 schema.set('toJSON', { virtuals: true });
