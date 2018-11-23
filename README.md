@@ -14,3 +14,10 @@ You can use use the development server at https://vpn.brendsimons.be/ to test th
 
 ### Permissions
 You can read more about permissions [here](/docs/permissions.md).
+
+## How to run this application
+
+1) Clone this repository
+2) Open a terminal in the root of this project.
+3) Run `npm install`.
+4) Run `npm start` (and keep it running while using the application).
