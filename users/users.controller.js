@@ -47,10 +47,6 @@ function getById(req, res, next) {
 }
 
 function update(req, res, next) {
-    if (permission.check(req, "manage_users")) {
-        return permission.throw(res);
-    }
-
     userService.update(req.params.id, req.body)
         .then(() => res.json({}))
         .catch(err => next(err));
