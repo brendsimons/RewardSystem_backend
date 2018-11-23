@@ -7,6 +7,7 @@
       "manage_reward_claims",
       "manage_tasks",
       "manage_task_claims",
+      "reset_scores",
       "default"
     ],
     "user": [

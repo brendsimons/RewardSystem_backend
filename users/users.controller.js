@@ -4,6 +4,7 @@ const userService = require('./user.service');
 const permission = require('../_helpers/permission');
 
 // routes
+router.get('/resetscores', resetScore);
 router.post('/login', login);
 router.post('/register', create);
 router.post('/', create);
@@ -63,4 +64,22 @@ function _delete(req, res, next) {
     userService.delete(req.params.id)
         .then(() => res.json({}))
         .catch(err => next(err));
+}
+
+function resetScore(req, res, next) {
+    if (permission.check(req, "reset_scores")) {
+        return permission.throw(res);
+    }
+
+    userService.getAll()
+        .then(users => {
+            for (var i = 0; i < users.length; i++) {
+                userService.update(users[i].id, {
+                    score: 0
+                });
+            }
+        })
+        .catch(err => next(err));
+
+    res.json({});
 }

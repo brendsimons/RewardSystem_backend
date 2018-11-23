@@ -129,3 +129,27 @@ Delete a specific user.
     "message": "Task successfully deleted"
 }
 ```
+
+### GET /users/current
+Get the user currently logged in.
+
+```json
+{
+    "_id": "5bf27b639013132040aeb718",
+    "firstName": "Jan",
+    "lastName": "",
+    "score": 1250,
+    "credits": 250,
+    "email": "email@email.com",
+    "image": "https://domain/path/G1.ext"
+}
+```
+
+### GET /users/resetscores
+Reset the score of every user.
+
+```json
+{
+
+}
+```
