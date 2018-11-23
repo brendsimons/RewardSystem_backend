@@ -14,9 +14,9 @@ module.exports = {
     delete: _delete
 };
 
-async function login({ username, password }) {
-    const user = await User.findOne({ username });
-    if (user && !user.disabled && bcrypt.compareSync(password, user.hash)) {
+async function login(body) {
+    const user = await User.findOne({ email: body.email });
+    if (user && !user.disabled && bcrypt.compareSync(body.password, user.hash)) {
         const { hash, ...userWithoutHash } = user.toObject();
         const token = jwt.sign({ sub: user.id, permissions: config.permissions[user.role] }, config.secret);
         return {
