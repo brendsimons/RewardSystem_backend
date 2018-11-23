@@ -69,7 +69,7 @@ Create a new claim.
 **request**
 ```json
 {
-    "taskId": "5bf27b639013132040aeb718",
+    "task": "5bf27b639013132040aeb718",
     "message": "This is a description written by the user."
 }
 ```

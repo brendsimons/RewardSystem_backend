@@ -69,7 +69,7 @@ Create a new claim.
 **request**
 ```json
 {
-    "rewardId": "5bf27b639013132040aeb718"
+    "reward": "5bf27b639013132040aeb718"
 }
 ```
 **response**
