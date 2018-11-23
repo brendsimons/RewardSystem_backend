@@ -8,6 +8,7 @@ const RewardClaim = db.RewardClaim;
 module.exports = {
     getAll,
     getById,
+    getByUser,
     create,
     update,
     delete: _delete
@@ -21,6 +22,14 @@ async function getAll() {
 
 async function getById(id) {
     return await RewardClaim.findById(id)
+        .populate('user', ['firstName', 'lastName', 'email', 'credits', 'score'])
+        .populate('reward');
+}
+
+async function getByUser(id) {
+    return await RewardClaim.find({
+        user: id
+    })
         .populate('user', ['firstName', 'lastName', 'email', 'credits', 'score'])
         .populate('reward');
 }

@@ -4,6 +4,7 @@ const taskClaimService = require('./taskclaim.service');
 const permission = require('../_helpers/permission');
 
 // routes
+router.get('/myown', getMyOwn);
 router.post('/', create);
 router.get('/', getAll);
 router.get('/:id', getById);
@@ -27,6 +28,12 @@ function getAll(req, res, next) {
 function getById(req, res, next) {
     taskClaimService.getById(req.params.id)
         .then(claim => claim ? res.json(claim) : res.sendStatus(404))
+        .catch(err => next(err));
+}
+
+function getMyOwn(req, res, next) {
+    taskClaimService.getByUser(req.user.sub)
+        .then(claims => res.json(claims))
         .catch(err => next(err));
 }
 

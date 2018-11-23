@@ -8,6 +8,7 @@ const TaskClaim = db.TaskClaim;
 module.exports = {
     getAll,
     getById,
+    getByUser,
     create,
     update,
     delete: _delete
@@ -21,6 +22,14 @@ async function getAll() {
 
 async function getById(id) {
     return await TaskClaim.findById(id)
+        .populate('user', ['firstName', 'lastName', 'email', 'credits', 'score'])
+        .populate('task');
+}
+
+async function getByUser(id) {
+    return await TaskClaim.find({
+        user: id
+    })
         .populate('user', ['firstName', 'lastName', 'email', 'credits', 'score'])
         .populate('task');
 }

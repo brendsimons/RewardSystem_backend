@@ -4,6 +4,7 @@ const rewardClaimService = require('./rewardclaim.service');
 const permission = require('../_helpers/permission');
 
 // routes
+router.get('/myown', getMyOwn);
 router.post('/', create);
 router.get('/', getAll);
 router.get('/:id', getById);
@@ -27,6 +28,12 @@ function getAll(req, res, next) {
 function getById(req, res, next) {
     rewardClaimService.getById(req.params.id)
         .then(claim => claim ? res.json(claim) : res.sendStatus(404))
+        .catch(err => next(err));
+}
+
+function getMyOwn(req, res, next) {
+    rewardClaimService.getByUser(req.user.sub)
+        .then(claims => res.json(claims))
         .catch(err => next(err));
 }
 
