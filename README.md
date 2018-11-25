@@ -4,7 +4,7 @@ This project is the backend for the [Reward System Frontend](https://github.com/
 
 ### The API
 
-You can use use the development server at https://vpn.brendsimons.be/ to test the api.
+You can use use the development server at https://rewardsystem-backend.herokuapp.com/ to test the api.
 
 [/rewards](/docs/rewards.md)  
 [/rewardclaims](/docs/rewardclaims.md)  
