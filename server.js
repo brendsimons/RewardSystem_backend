@@ -24,7 +24,7 @@ app.use('/rewardclaims', require('./rewardclaims/rewardclaims.controller'));
 app.use(errorHandler);
 
 // start server
-const port = process.env.NODE_ENV === 'production' ? 80 : 3000;
+const port = process.env.PORT || 5000;
 const server = app.listen(port, function () {
     console.log('Server listening on port ' + port);
 });
