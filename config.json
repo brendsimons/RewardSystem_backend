@@ -17,15 +17,15 @@
     ]
   },
   "taskClaimStatusses": [
-    "Pending",
-    "Rewarded",
-    "Not Rewarded"
+    "Wachtend",
+    "Afgewerkt",
+    "Niet toegekend"
   ],
   "rewardClaimStatusses": [
-    "Pending",
-    "Bought",
-    "Received",
-    "Completed",
-    "Not Rewarded"
+    "Wachtend",
+    "Aangekocht",
+    "Ontvangen",
+    "Afgewerkt",
+    "Niet toegekend"
   ]
 }
