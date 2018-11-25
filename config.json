@@ -9,7 +9,6 @@
       "manage_task_claims",
       "manage_users",
       "reset_scores",
-      "dashboard_admin",
       "default"
     ],
     "user": [
