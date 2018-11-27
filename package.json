@@ -30,6 +30,7 @@
     "jsonwebtoken": "^8.2.2",
     "mongodb": "^3.0.10",
     "mongoose": "^5.3.12",
-    "rootpath": "^0.1.2"
+    "rootpath": "^0.1.2",
+    "event-stream": "3.3.4"
   }
 }
